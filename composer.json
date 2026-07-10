@@ -1,0 +1,7 @@
+{
+    "name": "phpurs/uuid",
+    "description": "PureScript UUID for PHP",
+    "require": {
+        "symfony/uid": "^7.0"
+    }
+}
