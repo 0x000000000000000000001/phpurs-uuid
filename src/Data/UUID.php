@@ -1,6 +1,5 @@
 <?php
 
-namespace Data\UUID;
 
 use Symfony\Component\Uid\Uuid;
 
