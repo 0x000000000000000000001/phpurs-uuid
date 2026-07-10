@@ -2,8 +2,6 @@
 
 namespace Data\UUID;
 
-require_once __DIR__ . '/../../vendor/autoload.php';
-
 use Symfony\Component\Uid\Uuid;
 
 $Data_UUID_getUUIDImpl = function() {
