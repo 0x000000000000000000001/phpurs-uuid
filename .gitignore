@@ -8,3 +8,4 @@
 .psc-ide-port
 /.spago/
 .purs-repl
+.DS_Store
