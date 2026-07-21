@@ -1,4 +1,4 @@
-# purescript-uuid
+# phpurs-uuid
 
 [![Build & Test](https://github.com/megamaddu/purescript-uuid/actions/workflows/node.js.yml/badge.svg)](https://github.com/megamaddu/purescript-uuid/actions/workflows/node.js.yml)
 
