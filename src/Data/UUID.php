@@ -9,11 +9,11 @@ $validateV4UUID = function($str) {
 };
 
 $getUUID3Impl = function($str, $namespace) {
-        return \Symfony\Component\Uid\Uuid::v3(\Symfony\Component\Uid\Uuid::fromString($namespace), $str)->toRfc4122();
+    return \Symfony\Component\Uid\Uuid::v3(\Symfony\Component\Uid\Uuid::fromString($namespace), $str)->toRfc4122();
 };
 
 $getUUID5Impl = function($str, $namespace) {
-        return \Symfony\Component\Uid\Uuid::v5(\Symfony\Component\Uid\Uuid::fromString($namespace), $str)->toRfc4122();
+    return \Symfony\Component\Uid\Uuid::v5(\Symfony\Component\Uid\Uuid::fromString($namespace), $str)->toRfc4122();
 };
 
 return [
