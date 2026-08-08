@@ -9,3 +9,5 @@
 /.spago/
 .purs-repl
 .DS_Store
+.spago
+output
