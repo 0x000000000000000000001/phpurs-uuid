@@ -7,17 +7,22 @@ import Data.UUID (genUUID, genv3UUID, genv5UUID, parseUUID, toString)
 import Effect (Effect)
 import Effect.Aff (launchAff_)
 import Effect.Class (liftEffect)
+import Effect.Exception (error)
+import Control.Monad.Error.Class (throwError)
 import Effect.Unsafe (unsafePerformEffect)
 import Partial.Unsafe (unsafePartial)
 import Test.Spec (it, describe)
 import Test.Spec.Assertions (shouldEqual)
 import Test.Spec.Reporter.Console (consoleReporter)
-import Test.Spec.Runner (runSpec)
+import Test.Spec.Runner (evalSpecT, defaultConfig)
+import Test.Spec.Summary (successful)
+import Data.Newtype (un)
+import Data.Identity (Identity(..))
 
 main :: Effect Unit
 main =
   launchAff_ do
-    runSpec [ consoleReporter ] do
+    results <- un Identity $ evalSpecT (defaultConfig { exit = false }) [ consoleReporter ] do
       describe "UUID" do
         it "`genUUID` returns a uuid" do
           let
@@ -51,5 +56,7 @@ main =
 
             showUUID = "(UUID d0778cf2-3a4c-42ef-acbd-1269b6bec204)"
 
+          let
             uuid = parseUUID uuidStr
           showUUID `shouldEqual` (show $ unsafePartial $ fromJust uuid)
+    if successful results then pure unit else throwError (error "Tests failed")
