@@ -2,6 +2,7 @@
     "name": "phpurs/uuid",
     "description": "PureScript UUID for PHP",
     "require": {
-        "symfony/uid": "*"
+        "symfony/uid": "*",
+        "revolt/event-loop": "^1.0"
     }
 }
