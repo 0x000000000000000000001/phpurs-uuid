@@ -2,16 +2,16 @@ package:
   name: uuid
   dependencies:
     - prelude
-    - aff
     - effect
     - maybe
     - partial
-    - spec
     - strings
   test:
     main: Test.Main
     dependencies:
-      - spec
+      - assert
+      - console
+      - effect
 workspace:
   packageSet:
     registry: 77.7.0
