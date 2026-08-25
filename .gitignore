@@ -1,7 +1,8 @@
 /bower_components/
 /node_modules/
 /.pulp-cache/
-/output/
+output/
+output.bak/
 /output-pulp/
 /.psci*
 /src/.webpack.js
@@ -11,3 +12,4 @@
 .DS_Store
 .spago
 output
+output.bak
