@@ -3,6 +3,7 @@
 /.pulp-cache/
 output/
 output.bak/
+/.purmeta/
 /output-pulp/
 /.psci*
 /src/.webpack.js
